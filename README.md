@@ -31,7 +31,7 @@ Before running the scripts, ensure that your configuration file is properly set 
 
 To start training and validating the RL agent, use the run.py script. You can specify the configuration file, the split to be used for training, the output directory, and additional options like verbose mode. Here is the command to run run.py:
 
-    `python run.py --config config/sample.yaml --split 0 --output evaluations/validation/ -v`
+`python run.py --config config/sample.yaml --split 0 --output evaluations/validation/ -v`
 
 
 - `--config config/sample.yaml`: Specifies the path to the configuration file.
@@ -47,7 +47,7 @@ You can check all the available parameters and options in the [Arguments](##Argu
 
 After training multiple agents on different splits, you can use the evaluate_best.py script to evaluate the best performing agents from the validation set on the test data. Here is the command to run evaluate_best.py:
 
-    `python evaluate_best.py --config config/sample.yaml --input evaluations/validation/ --output evaluations/test/test_sample.pkl -v`
+`python evaluate_best.py --config config/sample.yaml --input evaluations/validation/ --output evaluations/test/test_sample.pkl -v`
 
 `--config config/sample.yaml`: Specifies the path to the configuration file. If must be the same one used for training the agents.
 `--input evaluations/validation/`: Specifies the directory containing the validation results.
@@ -58,14 +58,14 @@ You can check all the available parameters and options in the [Arguments](##Argu
 
 The resulting test_sample.pkl file is a pickle you can open in any Python script. For example:
 
-    ```py
-    import pickle
+```python
+import pickle
 
-    with open('evaluations/test/test_sample.pkl', 'rb') as f:
-        data = pickle.load(f)
+with open('evaluations/test/test_sample.pkl', 'rb') as f:
+    data = pickle.load(f)
 
-    print(data)
-    ```
+print(data)
+```
 
 This file is a dictionary summarizing the evaluation on test data in the cross-validation. It contains the following information:
 
