@@ -1,0 +1,32 @@
+
+# Mitigation cost in node-minutes
+mitigation_minutes: 2
+
+# Cross-validation
+n_splits: 6  # Number of data splits
+train_prop: 0.75  # Proportion of data for training in each split
+
+# Training parameters
+n_episodes: 20_000
+epsilon_decay: 0.99984  # For 20k episodes
+epsilon: 1
+epsilon_min: 0.05
+
+# Data file paths
+fts_path: 'data/features_df.csv'
+ues_path: 'data/ues_df.csv'
+jobs_path: 'data/jobs_df.csv'
+job_samples_path: 'data/job_samples'
+
+# Optional hyperparameters, if not provided they will be randomly initialized
+# These are just example hyperparameters
+# hyperparameters:
+#   learning_rate: 0.001
+#   batch_size: 32
+#   gamma: 0.99
+#   dnn_update_frequency: 10
+#   dnn_sync_frequency: 100
+#   per_a: 0.6
+#   per_b: 0.4
+#   max_episodes_buffer: 1000
+#   max_size_buffer: 10000
