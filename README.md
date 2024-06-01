@@ -11,7 +11,7 @@ The UERL code is released under the BSD-3 [License](LICENSE).
 
 This repository is currently undergoing cleanup and optimization in preparation for the upcoming HPDC24 conference publication. We are actively working on improving its readability, performance, and documentation to ensure its usability for the wider community.
 
-Our current focus is on generating useful synthetic logs for job samples and features of our RL model.
+Currently, the only missing component is the synthetic logs, which will be located in a `data/` folder. We will be realising them soon. As a result, the examples shown below will not run properly at this time. However, if you use your own logs, the code will function perfectly. If you have any questions or need assistance, please feel free to email me at `isaac.boixaderas at bsc.es`.
 
 
 ## Running scripts
